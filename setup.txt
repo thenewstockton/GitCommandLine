@@ -1,0 +1,18 @@
+Test Git demo
+
+add C:\Program Files (x86)\Notepad++ to PATH environment variable
+
+cd ~
+notepad++ .bash_profile 
+add the content into the file: alias npp='notepad++.exe -multiInst -nosession'
+
+To see configs:
+cat ./.gitconfig
+
+To change it:
+git config --global user.name "phil"
+git config --global user.email "abc@xyz.com"
+git config --global core.editor "notepad++.exe -multiInst -nosession"
+git config --global --list
+
+To edit configs : git config --global -e
