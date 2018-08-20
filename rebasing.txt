@@ -1,0 +1,23 @@
+simple example:
+git checkout -b myfeature
+--change stuff in both myfeature and master
+git rebase master
+git checkout master
+git merge myfeature
+
+conflicts:
+--two branches (changes at same lines)
+git rebase
+
+1. abort 
+    git rebase --abort
+2. merge
+    git mergetool
+    git add .
+    git rebase --continue
+
+
+pull with rebase (github):
+--change something both from local and remote
+git fetch origin master
+git pull --rebase origin master
