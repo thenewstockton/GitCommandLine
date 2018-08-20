@@ -1,0 +1,43 @@
+show changes with file name only:
+git diff --name-only SHA1 SHA2
+
+list branches:
+git branch -a
+
+branching:
+git branch mynewbranch //create new branch
+git checkout mynewbranch //switch
+git branch -m mynewbranch newbranch //rename
+git branch -d newbranch //delete
+
+
+Happy path / fast forward merges (when master no changes):
+
+git checkout -b newBranch //create and switch to newBranch
+--assume we changed something
+git difftool master titleBranch
+git merge titleBranch //merge titleBranch from master
+
+Disable fast forward merges:
+git checkout -b newBranch //create and switch to newBranch
+--assume we changed something
+git checkout master
+git merge testB --no-ff
+
+conclusions: 
+    Fast forward merge : you can't see merge tree
+    no fast forward merge: you see the merge tree
+
+Automatic merges:
+git checkout -b newBranch //create and switch to newBranch
+--assume we changed something
+git checkout master
+git merge newBranch -m "merging changes" //this will do a automatic merge
+
+
+Conflicts:
+git checkout -b realwork
+--assumed we changed something in realwork and master (same line)
+git merge realwork
+git mergetool
+git commit -m "resolved"
