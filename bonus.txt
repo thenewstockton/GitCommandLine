@@ -1,0 +1,12 @@
+reset and reflog:
+
+git reset HEAD^1 //up one commit    
+git reset SHA1 //go to that SHA1
+git reflog //show log with HEAD{x}
+
+
+branches:
+git branch test origin/testbranch
+
+delete remote branch:
+git push --delete origin branchName
