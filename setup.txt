@@ -26,12 +26,12 @@ git remote set-url origin https://github.com/repoUrl1 //changed the nickname
 git remote rm origin //removed the nickname 
 
 -------------------------------------
-git pull thenewstocktonRepo master ||   Updates changes from github
+git pull origin master ||   Updates changes from github
 -------------------------------------
 		is equivalent to 
 -------------------------------------
-git fetch thenewstocktonRepo 	   ||   Fetches new work by other people
-git merge thenewstoctkonRepo/master||   Merging combines your local changes with changes made by others 
+git fetch origin 	   ||   Fetches new work by other people
+git merge origin/master||   Merging combines your local changes with changes made by others 
 -------------------------------------
 
 git reset --hard origin/master    //To fix the issue "your branch is ahead of master"

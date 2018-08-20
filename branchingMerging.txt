@@ -41,3 +41,6 @@ git checkout -b realwork
 git merge realwork
 git mergetool
 git commit -m "resolved"
+
+merge without commit:
+git merge branch-name --no-commit --no-ff
