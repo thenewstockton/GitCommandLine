@@ -1,0 +1,27 @@
+comparing working directory and the staging area:
+
+git diff // comparing between unstaged and staged files
+git difftool //using p4merge
+
+comparing working directory and the last commit:
+
+git diff HEAD
+git difftool HEAD
+
+comparing staging area and the last commit:
+
+git diff --staged HEAD
+git difftool --staged HEAD
+
+limit comparisons to only one file:
+
+git diff -- file.txt
+
+compare between commits:
+git diff 094a5a1 HEAD //compare 094a5a1 and HEAD
+git diff HEAD HEAD^ //compare HEAD and HEAD minus 1
+git diff 094a5a1 abc123ab //compare 094a5a1 abc123ab
+
+compare between local and remote ( 2 branches):
+
+git diff master origin/master
