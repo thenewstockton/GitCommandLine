@@ -1,0 +1,38 @@
+simple stash example:
+npp file.txt
+git stash //stash your files
+
+--change something and commit
+
+git stash apply //unstash
+
+git stash list //list all stashes
+git stash drop //drop last stash
+
+stashing untracked files:
+npp newfile.txt
+git stash //this only gets tracked files
+
+git stash -u //this inclues untracked files
+git stash pop //apply and drop
+
+multiple stashes:
+npp simple.html
+git stash save "simple html"   //save with message
+npp index.html
+git stash save "index changes"
+npp README.md
+git stash save "README"
+
+git stash list
+git stash show stash@{0} //show changes
+git stash apply stash@{0} //apply changes
+git stash drop stash@{0} //drop the stash
+
+git stash clear //clears all
+
+
+stashing into a branch:
+
+git stash -u
+git stash branch newchanges //applies changes into a new branch
