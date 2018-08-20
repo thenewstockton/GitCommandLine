@@ -1,0 +1,87 @@
+To create a new proj: git init fresh-project
+
+To show status: git status
+
+To commit:
+git add .
+git commit
+
+
+Adding git to an existing project:
+cd into the folder
+git init 
+git add .
+git commit -m "message"
+
+to push:
+git add .
+git commit -m "message"
+git pull origin master
+git push origin master
+
+directly commit:
+git commit -am "message"
+
+to show tracked files: git ls-files
+
+recursively add:
+git add .
+
+to unstage:
+git reset HEAD file.txt
+
+to discard changes:
+git checkout -- file.txt
+
+to rename:
+git rename file1.txt file2.txt
+or
+mv file1.txt file2.txt
+git add -A
+
+to notify rename:
+git add file.txt
+git add -u
+
+
+
+delete untracked files:
+npp file.txt
+rm file.txt
+
+delete tracked files:
+git rm file.txt
+
+backup staged deleted files:
+git reset HEAD file.txt
+git checkout -- file.txt
+
+
+history:
+git log
+git log --abbrev-commit //abbreviated
+git log --oneline --graph --decorate
+git log b965626...40ede9a //show log between these two
+git log --since="3 days ago"  //show log in three days
+git log -- file.txt  //specific file log
+git log --follow -- level1/level2/level2.txt
+git show b965626 //show changes of that commit
+
+alias:
+    This is a useful command:
+git log --all --graph --decorate --oneline
+
+git config --global alias.hist "log --all --graph --decorate --oneline"
+git hist //is now very useful
+
+ignoring unwanted Files:
+npp .gitignore 
+
+the content:
+---------------------
+ignore
+*.log //ignore files ending with .log
+log/ //ignore the directory
+*.orig
+noTrack.txt
+---------------------

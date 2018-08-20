@@ -16,3 +16,5 @@ git config --global core.editor "notepad++.exe -multiInst -nosession"
 git config --global --list
 
 To edit configs : git config --global -e
+or
+npp ~/.gitconfig
